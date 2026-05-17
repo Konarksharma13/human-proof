@@ -18,7 +18,7 @@ import {
   Fingerprint,
   UserCheck
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { 
   Table, 
@@ -50,23 +50,34 @@ const Navbar = () => {
           <span className="font-heading font-bold text-xl tracking-tight">HumanProof</span>
         </div>
         
-        <div className="hidden md:flex items-center gap-8">
+        {/* <div className="hidden md:flex items-center gap-8">
           <Link href="#" className="text-sm font-medium text-muted-text hover:text-white transition-colors">Architecture</Link>
           <Link href="#" className="text-sm font-medium text-muted-text hover:text-white transition-colors">Security</Link>
           <Link href="#" className="text-sm font-medium text-muted-text hover:text-white transition-colors">Docs</Link>
-        </div>
+        </div> */}
 
         <div className="flex items-center gap-4">
-          <Button variant="ghost" size="sm" className="hidden sm:flex text-muted-text hover:text-white">
+          <Link 
+            href="https://github.com/Konarksharma13/human-proof" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={buttonVariants({ variant: "ghost", size: "sm", className: "hidden sm:flex text-muted-text hover:text-white" })}
+          >
             <Shield className="w-4 h-4 mr-2" />
             GitHub
-          </Button>
-          <Button variant="ghost" size="sm" className="hidden sm:flex text-muted-text hover:text-white">
+          </Link>
+          <Link 
+            href="#demo"
+            className={buttonVariants({ variant: "ghost", size: "sm", className: "hidden sm:flex text-muted-text hover:text-white" })}
+          >
             Demo
-          </Button>
-          <Button size="sm" className="bg-white text-black hover:bg-white/90 rounded-full px-5">
+          </Link>
+          <Link 
+            href="#install"
+            className={buttonVariants({ size: "sm", className: "bg-white text-black hover:bg-white/90 rounded-full px-5 flex items-center justify-center" })}
+          >
             Install Extension
-          </Button>
+          </Link>
         </div>
       </div>
     </nav>
@@ -486,10 +497,15 @@ export default function LandingPage() {
               Integrate Now
               <ExternalLink className="w-5 h-5 ml-2" />
             </Button>
-            <Button size="lg" variant="ghost" className="text-white hover:bg-white/5 border border-white/10 rounded-full px-10 h-16 text-lg">
+            <Link 
+              href="https://github.com/Konarksharma13/human-proof" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={buttonVariants({ size: "lg", variant: "ghost", className: "text-white hover:bg-white/5 border border-white/10 rounded-full px-10 h-16 text-lg flex items-center justify-center" })}
+            >
               <Shield className="w-5 h-5 mr-2" />
               View GitHub
-            </Button>
+            </Link>
           </motion.div>
         </div>
       </section>
