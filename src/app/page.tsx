@@ -3,8 +3,9 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
+import {
   Shield, 
+  Tickets, 
   ExternalLink, 
   ArrowRight, 
   CheckCircle2, 
@@ -50,33 +51,15 @@ const Navbar = () => {
           <span className="font-heading font-bold text-xl tracking-tight">HumanProof</span>
         </div>
         
-        {/* <div className="hidden md:flex items-center gap-8">
-          <Link href="#" className="text-sm font-medium text-muted-text hover:text-white transition-colors">Architecture</Link>
-          <Link href="#" className="text-sm font-medium text-muted-text hover:text-white transition-colors">Security</Link>
-          <Link href="#" className="text-sm font-medium text-muted-text hover:text-white transition-colors">Docs</Link>
-        </div> */}
 
         <div className="flex items-center gap-4">
           <Link 
-            href="https://github.com/Konarksharma13/human-proof" 
+            href="https://github.com/projectilx42-tech/midnight-hackathon-recaptcha" 
             target="_blank" 
-            rel="noopener noreferrer"
-            className={buttonVariants({ variant: "ghost", size: "sm", className: "hidden sm:flex text-muted-text hover:text-white" })}
-          >
-            <Shield className="w-4 h-4 mr-2" />
-            GitHub
-          </Link>
-          <Link 
-            href="#demo"
-            className={buttonVariants({ variant: "ghost", size: "sm", className: "hidden sm:flex text-muted-text hover:text-white" })}
-          >
-            Demo
-          </Link>
-          <Link 
-            href="#install"
             className={buttonVariants({ size: "sm", className: "bg-white text-black hover:bg-white/90 rounded-full px-5 flex items-center justify-center" })}
           >
-            Install Extension
+            <Tickets className="w-4 h-4 mr-2" />
+            GitHub
           </Link>
         </div>
       </div>
@@ -286,13 +269,14 @@ export default function LandingPage() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
               >
-                <Button size="lg" className="bg-white text-black hover:bg-white/90 rounded-full px-8 h-14 text-base group">
+                <Link 
+                  href="https://github.com/projectilx42-tech/midnight-hackathon-recaptcha" 
+                  target="_blank" 
+                  className={buttonVariants({ size: "lg", className: "bg-white text-black hover:bg-white/90 rounded-full px-8 h-14 text-base group" })}
+                >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button variant="ghost" size="lg" className="text-white hover:bg-white/5 rounded-full px-8 h-14 text-base">
-                  View Docs
-                </Button>
+                </Link>
               </motion.div>
             </div>
 
@@ -493,18 +477,14 @@ export default function LandingPage() {
             transition={{ delay: 0.2 }}
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
-            <Button size="lg" className="bg-accent text-white hover:bg-accent/90 rounded-full px-10 h-16 text-lg shadow-lg shadow-accent/20">
-              Integrate Now
-              <ExternalLink className="w-5 h-5 ml-2" />
-            </Button>
             <Link 
-              href="https://github.com/Konarksharma13/human-proof" 
+              href="https://github.com/projectilx42-tech/midnight-hackathon-recaptcha" 
               target="_blank" 
               rel="noopener noreferrer"
-              className={buttonVariants({ size: "lg", variant: "ghost", className: "text-white hover:bg-white/5 border border-white/10 rounded-full px-10 h-16 text-lg flex items-center justify-center" })}
+              className={buttonVariants({ size: "lg", className: "bg-accent text-white hover:bg-accent/90 rounded-full px-10 h-16 text-lg shadow-lg shadow-accent/20" })}
             >
-              <Shield className="w-5 h-5 mr-2" />
-              View GitHub
+               Integrate Now
+              <ExternalLink className="w-5 h-5 ml-2" />
             </Link>
           </motion.div>
         </div>
@@ -523,12 +503,6 @@ export default function LandingPage() {
             
             <div className="text-sm text-muted-text">
               © 2026 HumanProof. Built on Midnight. All rights reserved.
-            </div>
-
-            <div className="flex items-center gap-6 text-sm text-muted-text">
-              <Link href="#" className="hover:text-white transition-colors">Privacy</Link>
-              <Link href="#" className="hover:text-white transition-colors">Terms</Link>
-              <Link href="#" className="hover:text-white transition-colors">Security</Link>
             </div>
           </div>
         </div>
